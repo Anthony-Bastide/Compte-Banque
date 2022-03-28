@@ -1,0 +1,56 @@
+class Client{
+  private int cin;
+  private String nom;
+  private String prenom;
+  private String tel;
+
+  public Client(){
+    
+  }
+  public Client(int cin , String nom , String prenom , String tel){
+    this.cin=cin;
+    this.nom=nom;
+    this.prenom=prenom;
+    this.tel=tel;
+  }
+
+ public void setCin(int cin){
+    this.cin=cin;
+  }
+
+  public int getCin(){
+    return this.cin;
+  }
+
+  public void setNom(String nom){
+    this.nom=nom;
+  }
+
+  public String getNom(){
+    return this.nom;
+  }
+
+  public void setPrenom(String prenom){
+    this.prenom=prenom;
+  }
+  
+  public String getPrenom(){
+    return this.prenom;
+  }
+  
+  public void setTel(String tel){
+    this.tel=tel;
+  }
+
+  public String getTel(){
+    return this.tel;
+  }
+
+  public void crediterCompte(int somme,Compte compte){
+    compte.crediterSolde(somme);
+  }
+
+  public void debiterCompte(int somme,Compte compte){
+    compte.debiterSolde(somme);
+  }
+}
