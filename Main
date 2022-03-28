@@ -1,0 +1,9 @@
+class Main {
+  public static void main(String[] args) {
+    Client client = new Client(12345,"Bastide","Anthony","06 28 78 30 75");
+    Compte monCompte= new Compte(0,7548,client);
+    client.crediterCompte(200,monCompte);
+    System.out.println(monCompte.getSolde());
+    monCompte.afficher();
+  }
+}
