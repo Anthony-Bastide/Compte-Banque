@@ -1,0 +1,52 @@
+class Compte{
+  private int solde;
+  private int code;
+  private Client client;
+
+  public Compte(){
+    
+  }
+  public Compte(int solde , int code , Client client){
+    this.solde=solde;
+    this.code=code;
+    this.client=client;
+  }
+
+ public void setSolde(int solde){
+    this.solde=solde;
+  }
+
+  public int getSolde(){
+    return this.solde;
+  }
+
+  public void setCode(int code){
+    this.code=code;
+  }
+
+  public int getCode(){
+    return this.code;
+  }
+
+  public void setClient(Client client){
+    this.client=client;
+  }
+  
+  public Client getClient(){
+    return this.client;
+  }
+
+  public void crediterSolde(int somme){
+    this.solde+=somme;
+  }
+
+  public void debiterSolde(int somme){
+    this.solde-=somme;
+  }
+
+  public void afficher(){
+    System.out.println(this.solde);
+    System.out.println(this.code);
+    System.out.println(this.client);
+  }
+}
